@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Rice - Farm Connect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+        .order-form {
+            background-color: #fff;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+        .order-form input, .order-form button {
+            margin: 0.5em 0;
+            padding: 0.5em;
+            width: 100%;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Order Rice</h2>
+<img src="images/rice.jpg" alt="Rice" class="product-image">
+
+<div class="order-form">
+    <form action="submit-order.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="quantity">Quantity (kg):</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+</body>
+</html>

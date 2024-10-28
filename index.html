@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Connect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header, footer {
+            background-color: #28a745;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2em;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .product {
+            flex: 1 1 calc(33% - 1em);
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product h3 {
+            margin: 0.5em 0;
+        }
+        .product a {
+            text-decoration: none;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Farm Connect</h1>
+    <p>Connecting Farmers and Buyers Directly</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>About Us</h2>
+        <p>Farm Connect is a platform that bridges the gap between farmers and buyers, providing fresh, locally-sourced produce directly from the farm.</p>
+        <p><strong>Team:</strong></p>
+        <ul>
+            <li>Akula N V S Rohith (CEO)</li>
+            <li>Suryansh (CTO)</li>
+            <li>Nilaang (CFO)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <a href="order-rice.html"><h3>Rice</h3></a>
+                <p>High-quality rice sourced directly from farms.</p>
+            </div>
+            <div class="product">
+                <a href="order-tomatoes.html"><h3>Tomatoes</h3></a>
+                <p>Fresh, juicy tomatoes available for purchase.</p>
+            </div>
+            <div class="product">
+                <a href="order-onions.html"><h3>Onions</h3></a>
+                <p>Locally grown onions packed with flavor.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Contact us at <a href="mailto:info@farmconnect.com" style="color: #fff;">info@farmconnect.com</a></p>
+</footer>
+
+</body>
+</html>
