@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Rice - Farm Connect</title>
+    <title>Order Tomatoes - Farm Connect</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,60 +11,117 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
         }
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1em;
+        header, footer {
+            background-color: #28a745;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
         }
-        .order-form {
+        header a, footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
             background-color: #fff;
-            padding: 2em;
             border: 1px solid #ddd;
             border-radius: 5px;
-            text-align: center;
-            width: 300px;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2em;
+            margin-bottom: 2em;
         }
-        .order-form input, .order-form button {
+        .product-section {
+            display: flex;
+            gap: 2em;
+            margin-bottom: 1.5em;
+        }
+        .product-image {
+            max-width: 200px;
+            border-radius: 5px;
+        }
+        .product-details {
+            flex: 1;
+        }
+        .order-form, .feedback-section {
+            margin-top: 1.5em;
+        }
+        .order-form input, .order-form button, .feedback-section textarea {
             margin: 0.5em 0;
             padding: 0.5em;
             width: 100%;
+            font-size: 1em;
         }
         button {
             background-color: #28a745;
             color: #fff;
             border: none;
             cursor: pointer;
+            font-size: 1em;
+            padding: 0.75em;
+            border-radius: 5px;
         }
         button:hover {
             background-color: #218838;
+        }
+        .feedback-section textarea {
+            resize: vertical;
+            min-height: 100px;
         }
     </style>
 </head>
 <body>
 
-<h2>Order tomatoes</h2>
-<img src="images/tomatoes.jpeg" alt="tomatoes" class="product-image">
+<header>
+    <h1><a href="index.html">Farm Connect</a></h1>
+    <p>Connecting Farmers and Buyers Directly</p>
+</header>
 
-<div class="order-form">
-    <form action="submit-order.html" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+<div class="container">
+    <h2>Order Tomatoes</h2>
+    <div class="product-section">
+        <img src="images/tomatoes.jpeg" alt="Tomatoes" class="product-image">
+        <div class="product-details">
+            <h3>Fresh Juicy Tomatoes</h3>
+            <p>High-quality tomatoes sourced from local farms.</p>
+            <p><strong>Price:</strong> ₹30 per kg</p>
+            <p><strong>Available Stock:</strong> 500 kg</p>
+        </div>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <div class="order-form">
+        <form action="submit-order.html" method="post">
+            <h3>Order Now</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="quantity">Quantity (kg):</label>
-        <input type="number" id="quantity" name="quantity" min="1" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <button type="submit">Place Order</button>
-    </form>
+            <label for="quantity">Quantity (kg):</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <div class="feedback-section">
+        <h3>Customer Feedback</h3>
+        <form action="submit-feedback.html" method="post">
+            <label for="feedback">Share your thoughts:</label>
+            <textarea id="feedback" name="feedback" placeholder="How was your experience with our product?" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
 </div>
+
+<footer>
+    <p>Contact us at <a href="mailto:farmconnect@gmail.com">farmconnect@gmail.com</a><br>
+       <a href="about_us.html">About Us</a></p>
+</footer>
 
 </body>
 </html>
